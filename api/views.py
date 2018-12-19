@@ -44,7 +44,7 @@ class RestaurantUpdateView(RetrieveUpdateAPIView):
     serializer_class = RestaurantCreateUpdateSerializer
     lookup_field = 'id'
     lookup_url_kwarg = 'restaurant_id'
-    permission_classes = [IsAuthenticated,IsOwner]
+    # permission_classes = [IsAuthenticated,IsOwner]
 
 
 class RestaurantDeleteView(DestroyAPIView):
@@ -52,4 +52,4 @@ class RestaurantDeleteView(DestroyAPIView):
     serializer_class = RestaurantListSerializer
     lookup_field = 'id'
     lookup_url_kwarg = 'restaurant_id'
-    permission_classes = [IsAuthenticated,IsAdminUser]
+    # permission_classes = [IsAuthenticated,IsAdminUser]
